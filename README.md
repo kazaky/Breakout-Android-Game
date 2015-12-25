@@ -9,7 +9,7 @@ Breakout Arabic Android Game
 لعبة الاختراق العظيم (بريكآوت) بعدة مراحل  وتصميم مبسط
 للفوز في اللعبة يجب تخطي ثلاث مراحل
 
-<img src="https://lh3.googleusercontent.com/_PNvG-KblQTKmvPvsLZ6njdBvn0y_ED4USDTel8r2lMHSEa-36fRLOY61iKYcS2J79c=w300-rw" width="100" height="100" align="left" >
+*<img src="https://lh3.googleusercontent.com/_PNvG-KblQTKmvPvsLZ6njdBvn0y_ED4USDTel8r2lMHSEa-36fRLOY61iKYcS2J79c=w300-rw" width="150" height="150" align="left" >*
 
 **[Install on Google Play](https://play.google.com/store/apps/details?id=com.kazaky.breakout)**
 
