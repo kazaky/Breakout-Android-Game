@@ -2,14 +2,17 @@
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <bitmap
-            android:src="@drawable/wall" />
+        <bitmap android:src="@drawable/wall" />
     </item>
 
-    <item >
-        <shape android:shape="rectangle" >
-            <gradient android:angle="270"  android:startColor="#60701f22" android:endColor="#00000000" android:type="linear" />
-            </shape>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#00000000"
+                android:startColor="#60701f22"
+                android:type="linear" />
+        </shape>
 
     </item>
 

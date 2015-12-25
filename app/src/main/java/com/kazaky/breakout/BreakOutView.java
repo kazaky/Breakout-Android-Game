@@ -196,23 +196,20 @@ public class BreakOutView extends SurfaceView implements Runnable {
         level = Xlevel;
         switch (Xlevel) {
 
-            case 1:
-                // level 1
-                ball.xVelocity = 400;
-                ball.yVelocity = -800;
-
-                break;
             case 2:
                 // level 2
                 ball.xVelocity = 600;
                 ball.yVelocity = -1000;
 
                 break;
+
+            // level 3
             case 3:
                 ball.xVelocity = 1000;
                 ball.yVelocity = -1400;
-
                 break;
+
+            // level 1
             default:
                 ball.xVelocity = 400;
                 ball.yVelocity = -800;
@@ -220,6 +217,8 @@ public class BreakOutView extends SurfaceView implements Runnable {
 
 
         }
+
+        // Brick Size
         int brickWidth = screenX / 8;
         int brickHeight = screenY / 10;
 
@@ -232,7 +231,7 @@ public class BreakOutView extends SurfaceView implements Runnable {
             }
         }
 
-        // if Menu_Layout over reset scores and lives
+        // if Game is over reset scores ,lives &Level
         if (lives == 0) {
             score = 0;
             lives = 3;
@@ -248,7 +247,6 @@ public class BreakOutView extends SurfaceView implements Runnable {
             // Capture the current time in milliseconds in startFrameTime
             long startFrameTime = System.currentTimeMillis();
 
-            // Update the frame
             // Update the frame
             if (!paused) {
                 update();
@@ -300,7 +298,7 @@ public class BreakOutView extends SurfaceView implements Runnable {
 
                 ) {
 
-            // ball.setRandomXVelocity();
+
             ball.reverseYVelocity();
 
             // ReverseX Direction + IncreaseX speed
@@ -313,10 +311,10 @@ public class BreakOutView extends SurfaceView implements Runnable {
                 ball.sameXVelocity();
             }
 
-            // Paddle is still, DecreaseX speed
-            else if (paddle.getMovementState() == paddle.STOPPED) {
+            /*// Paddle is still, DecreaseX speed
+             else if (paddle.getMovementState() == paddle.STOPPED) {
                 ball.zeroXVelocity();
-            }
+            }*/
 
             // Some intersection Bugs
             ball.clearObstacleY(paddle.getRect().top - 20);
@@ -325,7 +323,7 @@ public class BreakOutView extends SurfaceView implements Runnable {
         }
 
         // Bounce the ball back when it hits the bottom of screen
-        // And deduct a life
+        // And Lose a life
         if (ball.getRect().bottom > screenY) {
             ball.reverseYVelocity();
             ball.clearObstacleY(screenY - 5);
@@ -336,6 +334,7 @@ public class BreakOutView extends SurfaceView implements Runnable {
 
             if (lives == 0) {
                 paused = true;
+
                 //draw Loss;
                 canvas = ourHolder.lockCanvas();
                 paint.setColor(getResources().getColor(R.color.orange));
