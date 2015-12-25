@@ -13,6 +13,7 @@ Breakout Arabic Android Game
 
 **[Install on Google Play](https://play.google.com/store/apps/details?id=com.kazaky.breakout)**
 
+<Enter><Enter><Enter><Enter><Enter><Enter><Enter>
 
 ======================================================================================================================================
 The MIT License (MIT)
